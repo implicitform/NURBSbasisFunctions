@@ -1,3 +1,6 @@
+clear
+clc
+
 taux = 0:.025:1; % sites where NURBS basis function is to be computed in the x direction
 tauy = 0:.025:1; % sites where NURBS basis function is to be computed in the y direction
 
@@ -31,16 +34,22 @@ for j = 1:size(plotBasis1y,2)
             globalIndice = size(plotBasis1x,2)*(j-1)+i;
             figure(globalIndice)
             surf(X,Y,A*ones(size(plotBasis1x,2),size(plotBasis1y,2))*B');
-            
             axis([0 1 0 1 0 1])
-            %set(CData,'scaled')
-            Movie(globalIndice)=getframe(gcf,[0 0 414 560]);
+            Movie(globalIndice)=getframe(gcf);
         end
 end
 
-% movie2avi(Movie,'BasisFunctions.avi','fps',6,'quality',100); %removed in MATLAB R2016
+movie(Movie, globalIndice)
+
+% movie2avi(Movie,'BasisFunctions.avi','fps',6,'quality',100);  %working - movie2avi removed in MATLAB R2016
+                                                                %use VideoWriter instead
+
+%{
+Generating .avi for MATLAB version R2016 and later yields the following
+persistent error: All 'cdata' fields in FRAMES must be the same size.
 
 basisFunctions = VideoWriter('BasisFunctions.avi');
 open(basisFunctions);
 writeVideo(basisFunctions,Movie);
 close(basisFunctions);
+%}

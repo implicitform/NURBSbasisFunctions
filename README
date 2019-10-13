@@ -1,0 +1,9 @@
+Part of the matlab code developed for the thesis conducted under the supervision of Prof. C. Provatidis at the National Technical University of Athens (NTUA), titled:
+"Solution of Laplace's equation in 1 and 2 dimensions by isogeometric analysis."
+
+nurbscol is a function that returns NURBS basis fucntions and their first derivatives at points specified as input in tau vector.
+plotBasisFunctions is a script to showcase nurbscol usage by plotting 2d NURBS basis functions for a given NURBS, same for both parametric directions.
+
+A slightly modified version of nurbscol has been published in p.369 of the book "Precursors of Isogeometric Analysis", Prof. C. Provatidis, Springer.
+
+ © 2016: Prof. C. Provatidis, and Aris Papangelakis, NTUA

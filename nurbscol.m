@@ -2,7 +2,7 @@ function[nurbs_bf,nurbs_dbf] = nurbscol(knots,k,tau,weights)
 
 %---PROGRAM P8-1
 
-% 2016: Prof. C. Provatidis, and Aris Papangelakis, NTUA
+% © 2016: Prof. C. Provatidis, and Aris Papangelakis, NTUA
 
 %-------------------------------------------------------------------------------------------------
 %NOMENCLATURE
